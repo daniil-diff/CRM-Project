@@ -1,0 +1,93 @@
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+
+    &__sidebar {
+        width: 250px;
+        background-color: $gray-lighter;
+        border-right: 1px solid $gray-medium;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+
+            &__img {
+                padding-right: 10px;
+            }
+
+            &__span {
+                margin-top: 15px;
+                font-size: 10px;
+                color: $gray-darker;
+            }
+        }
+
+        .nav {
+            list-style: none;
+
+            &__item {
+                margin-bottom: 10px;
+
+                &--active .nav__link {
+                    background-color: $primary-color;
+                    color: $gray-lighter;
+                }
+            }
+
+            &__link {
+                text-decoration: none;
+                color: $gray-subtle;
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+
+                .nav__arrow-right {
+                    margin-left: 5px;
+                    width: 7px;
+                    height: 7px;
+                    border-top: 2px solid $gray-medium;
+                    border-right: 2px solid $gray-medium;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }}
+    
+    .dashboard__profile {
+        display: flex;
+        margin-top: auto;
+        padding-top: 10px;
+        cursor: pointer;
+    }
+    
+    .dashboard__profile .profile {
+        display: flex;
+        align-items: center;
+    }
+    
+    .dashboard__profile .profile__image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    
+    .dashboard__profile .profile__info .profile__name {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .dashboard__profile .profile__info .profile__role {
+        font-size: 14px;
+        color: #888;
+    }
