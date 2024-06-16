@@ -193,3 +193,12 @@ function bindPaginationHandlers() {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var hamburgerMenu = document.getElementById('hamburger-menu');
+    var menu = document.getElementById('menu');
+
+    hamburgerMenu.addEventListener('click', function() {
+        menu.classList.toggle('show');
+    });
+});
